@@ -1,0 +1,59 @@
+<h3>Create Pet</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Pet Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="petName"
+        required
+        [(ngModel)]="pet.petName"
+        name="petName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Owner Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ownerName"
+        required
+        [(ngModel)]="pet.ownerName"
+        name="ownerName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Species</label>
+      <input
+        type="text"
+        class="form-control"
+        id="species"
+        required
+        [(ngModel)]="pet.species"
+        name="species"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="name">D.O.B</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dob"
+        required
+        [(ngModel)]="pet.dob"
+        name="dob"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="neePet()">Add</button> -->
+</div>

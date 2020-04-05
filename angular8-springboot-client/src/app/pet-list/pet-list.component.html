@@ -1,0 +1,45 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Pet List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Pet Name</th>
+          <th>Owner Name</th>
+          <th>Species</th>
+          <th>D.O.B</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pet of pets | async">
+          <td>{{ pet.petName }}</td>
+          <td>{{ pet.ownerName }}</td>
+          <td>{{ pet.species }}</td>
+          <td>{{ pet.dob }}</td>
+          <td>
+            <button (click)="deletePet(pet.id)" class="btn btn-danger">
+              Delete
+            </button>
+            <button
+              (click)="updatePet(pet.id)"
+              class="btn btn-info"
+              style="margin-left: 10px;"
+            >
+              Update
+            </button>
+            <button
+              (click)="petDetails(pet.id)"
+              class="btn btn-info"
+              style="margin-left: 10px;"
+            >
+              Details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

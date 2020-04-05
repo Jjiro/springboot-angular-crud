@@ -1,0 +1,21 @@
+<h2>Pet Details</h2>
+
+<hr />
+<div *ngIf="pet">
+  <div>
+    <label><b>Pet Name: </b></label> {{ pet.petName }}
+  </div>
+  <div>
+    <label><b>Owner Name: </b></label> {{ pet.ownerName }}
+  </div>
+  <div>
+    <label><b>Species: </b></label> {{ pet.species }}
+  </div>
+  <div>
+    <label><b>D.O.B: </b></label> {{ pet.dob }}
+  </div>
+</div>
+
+<br />
+<br />
+<button (click)="list()" class="btn btn-primary">Back to Pet List</button><br />
