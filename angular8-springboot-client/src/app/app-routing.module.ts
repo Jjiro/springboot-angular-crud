@@ -10,6 +10,8 @@ import { CreatePetComponent } from "./create-pet/create-pet.component";
 import { PetListComponent } from "./pet-list/pet-list.component";
 import { UpdatePetComponent } from "./update-pet/update-pet.component";
 
+//import { SelectivePreloadingStrategyService } from "./app/selective-preloading-strategy.service";
+
 const routes: Routes = [
   { path: "", redirectTo: "employee", pathMatch: "full" },
   { path: "employees", component: EmployeeListComponent },
@@ -24,7 +26,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      enableTracing: false, // <-- debugging purposes only
+      //preloadingStrategy: SelectivePreloadingStrategyService,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
