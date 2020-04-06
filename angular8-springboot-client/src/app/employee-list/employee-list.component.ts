@@ -13,8 +13,7 @@ import { Router } from '@angular/router';
 export class EmployeeListComponent implements OnInit {
   employees: Observable<Employee[]>;
 
-  constructor(private employeeService: EmployeeService,
-    private router: Router) {}
+  constructor(private employeeService: EmployeeService, private router: Router) {}
 
   ngOnInit() {
     this.reloadData();
@@ -35,10 +34,10 @@ export class EmployeeListComponent implements OnInit {
   }
 
   employeeDetails(id: number){
-    this.router.navigate(['details', id]);
+    this.router.navigate(['details-employee', id]);
   }
 
   updateEmployee(id: number){
-    this.router.navigate(['update', id]);
+    this.router.navigate(['update-employee', id]);
   }
 }

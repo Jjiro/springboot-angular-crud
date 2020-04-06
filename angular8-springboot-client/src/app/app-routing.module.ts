@@ -10,19 +10,16 @@ import { CreatePetComponent } from "./create-pet/create-pet.component";
 import { PetListComponent } from "./pet-list/pet-list.component";
 import { UpdatePetComponent } from "./update-pet/update-pet.component";
 
-//import { SelectivePreloadingStrategyService } from "./app/selective-preloading-strategy.service";
-
 const routes: Routes = [
   { path: "", redirectTo: "employee", pathMatch: "full" },
   { path: "employees", component: EmployeeListComponent },
-  { path: "add", component: CreateEmployeeComponent },
-  { path: "update/:id", component: UpdateEmployeeComponent },
-  { path: "details/:id", component: EmployeeDetailsComponent },
-  //{ path: "", redirectTo: "pet", pathMatch: "full" },
+  { path: "add-employee", component: CreateEmployeeComponent },
+  { path: "update-employee/:id", component: UpdateEmployeeComponent },
+  { path: "details-employee/:id", component: EmployeeDetailsComponent },
   { path: "pets", component: PetListComponent },
-  { path: "add", component: CreatePetComponent },
-  { path: "update/:id", component: UpdatePetComponent },
-  { path: "details/:id", component: PetDetailsComponent },
+  { path: "add-pet", component: CreatePetComponent },
+  { path: "update-pet/:id", component: UpdatePetComponent },
+  { path: "details-pet/:id", component: PetDetailsComponent },
 ];
 
 @NgModule({

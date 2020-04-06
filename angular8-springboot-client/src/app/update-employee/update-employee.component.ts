@@ -11,6 +11,7 @@ import { EmployeeService } from "../employee.service";
 export class UpdateEmployeeComponent implements OnInit {
   id: number;
   employee: Employee;
+  submitted = false;
 
   constructor(
     private route: ActivatedRoute,

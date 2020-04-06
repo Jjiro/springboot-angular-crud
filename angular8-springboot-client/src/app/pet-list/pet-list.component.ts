@@ -34,10 +34,10 @@ export class PetListComponent implements OnInit {
   }
 
   petDetails(id: number) {
-    this.router.navigate(["details", id]);
+    this.router.navigate(["details-pet", id]);
   }
 
   updatePet(id: number) {
-    this.router.navigate(["update", id]);
+    this.router.navigate(["update-pet", id]);
   }
 }
